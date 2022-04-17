@@ -1,0 +1,118 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'Helvetica Neue R'; 
+  src: url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Roman.eot');
+  src: local('../fonts/Helvetica Neue/Helvetica Neue LT Pro 55 Roman'), local('HelveticaNeueLTPro-Roman'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Roman.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Roman.woff2') format('woff2'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Roman.woff') format('woff'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue M';
+  src: url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Md.eot');
+  src: local('../fonts/Helvetica Neue/Helvetica Neue LT Pro 65 Medium'), local('HelveticaNeueLTPro-Md'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Md.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Md.woff2') format('woff2'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Md.woff') format('woff'),
+      url('../fonts/Helvetica Neue/HelveticaNeueLTPro-Md.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT_R';
+  src: url('../fonts/GT America/GTAmerica-Regular.eot');
+  src: local('GT America Regular'), local('GTAmerica-Regular'),
+      url('../fonts/GT America/GTAmerica-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/GT America/GTAmerica-Regular.woff2') format('woff2'),
+      url('../fonts/GT America/GTAmerica-Regular.woff') format('woff'),
+      url('../fonts/GT America/GTAmerica-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT_C';
+  src: url('../fonts/GT America/GTAmerica-CondensedLight.eot');
+  src: local('GT America Condensed Light'), local('GTAmerica-CondensedLight'),
+      url('../fonts/GT America/GTAmerica-CondensedLight.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/GT America/GTAmerica-CondensedLight.woff2') format('woff2'),
+      url('../fonts/GT America/GTAmerica-CondensedLight.woff') format('woff'),
+      url('../fonts/GT America/GTAmerica-CondensedLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Paybooc_M';
+  src: url('../fonts/Paybooc/payboocOTFMedium.eot');
+  src: local(''), local('payboocOTFMedium'),
+      url('../fonts/Paybooc/payboocOTFMedium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Paybooc/payboocOTFMedium.woff2') format('woff2'),
+      url('../fonts/Paybooc/payboocOTFMedium.woff') format('woff'),
+      url('../fonts/Paybooc/payboocOTFMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.blind{
+  position: absolute;
+  width: 1px; height: 1px; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0);
+}
+.clear::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+
+.container>div{ margin-bottom: 50px; }
+
+/***** Text CSS *****/
+/* Title */
+.tit{ padding: 15px 0 20px; }
+h2{ font: bold 16px 'Paybooc_M', sans-serif; text-align: center; }
+
+/* Text Style */
+.txt_box{ margin-top: 10px; }
+.txt_box::after{ content:''; display: block; clear: both;}
+.name{ display: block;
+  width: 80%; font-weight: 500; font-size: 13px; line-height: 20px;  letter-spacing: -0.05em; color: #2d2d2d; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; text-indent: 5px; }
+.price{ float: left; font: 13px/20px 'Helvetica Neue M', sans-serif; text-indent: 5px;  }
+.sale{  float: right;  font: 12px/20px 'Helvetica Neue R', sans-serif; color: #fa5500; margin-right: 5px; }
+
+/***** Slide CSS *****/
+/* Nav */
+.slide_nav_tab{ text-align: center; }
+.slide_nav_tab ul{ display: inline-block; }
+.slide_nav_tab ul li{ float: left; margin: 0 10px 10px; }
+.slide_nav_tab ul li a{ position: relative; display: block; color: #aaa; font: 14px/25px 'Helvetica Neue M'; }
+.slide_nav_tab ul li a::after{ content:''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: #FF6E1A; }
+.slide_nav_tab ul li.active a{ color: #2d2d2d; }
+.slide_nav_tab ul li.active a::after{ width: 100%; }
+
+
+/* Pagination */
+.swiper-pagination-bullet-active{background: #2d2d2d; }
+
+/* Box Line */
+.swiper-slide ul li.line .img_wrap{ position: relative; }
+.swiper-slide ul li.line .img_wrap::after{ content:''; position: absolute; left: 0; top: 0; bottom: 0; right: 0; border: 1px solid rgba(221,221,221, 0.4); }
+
+/* Heart(BookMark) */
+.heart_box{ outline: none; border: 0; margin: 0; padding: 0;   position: absolute; top: 5px; right: 5px; width: 20px; height: 20px;border-radius: 50%; background: rgba(0,0,0, .1); cursor: pointer; }
+.heart_box .heart_mark{ position: relative; width: 14px; height: 14px;  }
+.heart_mark::before{ content:''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: url(../images/heart.svg) no-repeat; width: 14px; height: 14px; background-size: 100%; margin-top: 2px;  visibility: visible; opacity: 1; }
+.heart_mark::after{ content:''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: url(../images/heart2.svg) no-repeat; width: 14px; height: 14px; background-size: 100%; margin-top: 2px; visibility: hidden; opacity: 0; }
+.heart_box .heart_mark.active::before{ visibility: hidden; opacity: 0; }
+.heart_box .heart_mark.active::after{ visibility: visible; opacity: 1; }
