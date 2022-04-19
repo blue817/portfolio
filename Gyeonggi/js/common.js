@@ -27,24 +27,17 @@ $(function(){
   }
  })
 const pcMenu01 = document.querySelectorAll('.gnb>.inner>ul>li');
-const reset01 = function(){
-  for(let i = 0; i<pcMenu01.length; i++){
-    pcMenu01[i].classList.remove('on');
-  };
-};
 
 const pcMenu = function(){
   pcMenu01.forEach(function(item){
-   console.log(item);
+   item.classList.remove('on'); 
    item.addEventListener('mouseover',function(){
-    reset01();
     item.classList.add('on');
    })
   item.addEventListener('mouseleave',function(){
-    reset01();
+    item.classList.remove('on'); 
   })
  })
-
 }
 
 
@@ -64,24 +57,20 @@ mClose.addEventListener('click',function(e){
 });
 const mMenu01 = document.querySelectorAll('.gnb>.inner>ul>li');
 const lnbList = gnbArea.querySelectorAll('.lnb>li');
-const reset02 = function(){
+const reset = function(){
   for(let r = 0; r<mMenu01.length; r++){
    mMenu01[r].classList.remove('active');
    }
 }
-const reset03 = function(){
-  for(let w = 0; w<lnbList.length; w++){
-   lnbList[w].classList.remove('open');
-   }
-}
+
 const mMenu = function(){
   mMenu01.forEach(function(item){
+
    item.addEventListener('click',function(e){
      e.preventDefault();
      if(item.classList.contains('active')){
-
      }else{
-       reset02();
+       reset();
        item.classList.add('active');
      }
    });
@@ -91,11 +80,11 @@ const mSub = function(){
     lnbList.forEach(function(ev){
     ev.addEventListener('click',function(e){
       e.preventDefault();
-      console.log(lnbList);
+    
       if(ev.classList.contains('open')){
-      ev.classList.remove('open');
+        ev.classList.remove('open');
       }else{
-        reset03();
+        ev.classList.remove('open');
         ev.classList.add('open');
      }
     })
