@@ -96,7 +96,7 @@ $(function(){
 $('.notice_area h3').click(function(e){
   e.preventDefault();
   $('.notice_area h3').removeClass('active');
-  $('.notice_area content').removeClass('active');
+  $('.notice_area .content').removeClass('active');
   $(this).addClass('active');
   $(this).siblings('.content').addClass('active');
 })
