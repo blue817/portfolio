@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Malgun R';
+  src: url('../font/MalgunGothic/MalgunGothicRegular.eot');
+  src: local('Malgun Gothic'), local('MalgunGothicRegular'),
+      url('../font/MalgunGothic/MalgunGothicRegular.eot?#iefix') format('embedded-opentype'),
+      url('../font/MalgunGothic/MalgunGothicRegular.woff2') format('woff2'),
+      url('../font/MalgunGothic/MalgunGothicRegular.woff') format('woff'),
+      url('../font/MalgunGothic/MalgunGothicRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+.blind{
+  position: absolute;
+  width: 1px; height: 1px; 
+  margin: -1px; 
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0);
+}
+.clearfix::after{
+  content:'';
+  display: block;
+  clear: both;
+}
+.inner{ max-width: 1200px; margin: auto;}
+
+.hidden{
+  overflow: hidden;
+}
+
+
+/* sp bg */
+header fieldset .day_close button::before,
+header .util_area .fam_site::after,
+header .util_area .lang_box::before,
+header .util_area .lang_box::after,
+header .navi .search_container .cate_select::after,
+header .search_container .sub_btn::before,
+header .navi .weather ul li a i,
+header .weather .weather_status::before,
+header .gnb_area .lnb>ul>li>a::after,
+.about_area ul li a::before,
+.group02 .notice_area .content_list li a::before,
+.group02 .notice_area .notice_link h3::after,
+.group03 .swiper-slide ul li a::before,
+.group03 .swiper-slide ul li a::after,
+.group05 .quick_area h4 a::after,
+.group05 .quick_area .content li a::after,
+footer .f_top>ul>li>a::before,
+footer .f_top>ul>li>a::after,
+header .gnb_area nav>ul>li::before,
+header .gnb_area nav>ul>li::after,
+header .lnb>ul>li>a::before,
+header .gnb_area .menu06 .lnb>ul>li::before,
+.group05 .quick_area .content li::before,
+header .gnb_area .sub a.blank_ico::after,
+.sp_bg{
+  background-image: url(../img/is01.png);
+  background-repeat: no-repeat;
+  background-size: 142px 150px;
+}
+
+header .gnb_area .menu06 .lnb a::before,
+.sp_bg02{
+  background-image: url(../img/is02.png);
+  background-repeat: no-repeat;
+  background-size: 410px 336px;
+}
+.group03 .swiper-slide ul li::before,
+.sp_bg03{
+  background-image: url(../img/is03.png);
+  background-repeat: no-repeat;
+  background-size: 230px 140px;
+}
+.group05 .quick_area h4 a::before,
+.sp_bg04{
+  background-image: url(../img/is04.png);
+  background-repeat: no-repeat;
+  background-size: 216px 86px;
+}
+
+.tit{ display: flex; justify-content: space-between; margin-bottom: 20px; }
+.tit h3{ font-size: 20px; font-weight: bold;  }
+
+@media screen and (max-width:767px) {
+  .tit h3{ font-size: 17px; font-weight: bold;  } 
+}
+
+
+
+
